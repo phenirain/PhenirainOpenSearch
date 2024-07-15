@@ -7,12 +7,14 @@ apply plugin: 'opensearch.opensearchplugin'
 apply plugin: 'opensearch.yaml-rest-test'
 apply plugin: 'opensearch.pluginzip'
 
-def pluginName = 'rename'
+def pluginName = 'PhenirainOpenSearch'
 def pluginDescription = 'Custom plugin'
 def projectPath = 'org.opensearch'
-def pathToPlugin = 'path.to.plugin'
-def pluginClassName = 'RenamePlugin'
-group = "RenameGroup"
+def pathToPlugin = 'PhenirainPlugin'
+def pluginClassName = 'PhenirainPlugin'
+group = "PhenirainGroup"
+
+
 
 tasks.register("preparePluginPathDirs") {
     mustRunAfter clean
@@ -23,6 +25,7 @@ tasks.register("preparePluginPathDirs") {
         mkdir "src/yamlRestTest/java/org/opensearch/$newPath"
     }
 }
+
 
 publishing {
     publications {
